@@ -1,6 +1,5 @@
-def main():
-    print("Hello from eva!")
-
-
+"""
+The main server starting logic will be called/written here using uvicorn
+"""
 if __name__ == "__main__":
-    main()
+    pass
