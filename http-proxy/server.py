@@ -4,10 +4,14 @@ import argparse
 
 from endpoints import fetch, update
 
+# Testing imports
+from endpoints import testing
+
 server = FastAPI(title="http-proxy server", description="An http server to relay context info to the main db")
 
 server.include_router(fetch.router)
 server.include_router(update.router)
+server.include_router(testing.router)
 
 def main():
     parser = argparse.ArgumentParser(description="Run FastAPI JSON Server")
