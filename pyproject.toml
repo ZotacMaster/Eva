@@ -4,4 +4,10 @@ version = "0.1.0"
 description = "Eva acts as a smart proxy agent between clients (or AI agents) and the core ArchiveNet services."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "click >=8.1",
+]
+
+[project.scripts]
+start = "cli:start_server"
+

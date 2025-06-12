@@ -23,7 +23,7 @@ class ContextResponse(BaseModel):
 
 class HealthCheck(BaseModel):
     status: str
-    timestamp: datetime
+    #timestamp: datetime
     cache_connected: bool
     external_db_connected: bool
 

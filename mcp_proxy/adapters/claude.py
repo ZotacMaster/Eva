@@ -1,6 +1,3 @@
-""" here i need to make a python script that makes the claude_desktop_config.json file 
-    in the correct location before/after the installation of claude desktop app.
-""" 
 import json 
 from base import BaseAdapterClass
 
@@ -12,7 +9,7 @@ class ClaudeAdapter(BaseAdapterClass):
         super().__init__(agent_name)
 
     def configure_mcp(self):
-        """Configuration logic for claude desktop goes here"""
+        """Configuration logic for claude desktop"""
         cf = ConfigFinder("claude")
         config_path = cf.get_path()
         if not config_path:
@@ -33,6 +30,7 @@ class ClaudeAdapter(BaseAdapterClass):
                 }
             }
         }
+            
         with open(config_path, 'w') as f:
             json.dump(config, f, indent=4)
         
