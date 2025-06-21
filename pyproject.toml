@@ -1,0 +1,24 @@
+[project]
+name = "Eva"
+version = "0.1.0"
+description = "Eva - A CLI program to manage all your MCPs"
+readme = "README.md"
+authors = [
+    { name = "Suchetan Chakraborty", email = "suchetan005@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.2.1",
+    "fastapi>=0.115.13",
+    "httpx>=0.28.1",
+    "mcp>=1.9.4",
+    "pydantic>=2.11.7",
+    "uvicorn>=0.34.3",
+]
+
+[project.scripts]
+eva = "eva.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
