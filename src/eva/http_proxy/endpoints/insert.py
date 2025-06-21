@@ -4,13 +4,14 @@ import os
 import httpx
 import json
 
-from eva.utils.config import CONFIG_FILE, EIZEN_URL
+from eva.utils.config import ConfigManager, EIZEN_URL
 from eva.utils.models  import ContextData
 
 router = APIRouter()
 base_url = EIZEN_URL
 headers = {}
-with open(CONFIG_FILE, 'r') as f:
+config = ConfigManager("", "").load_config_path()
+with open(config, 'r') as f:
     config = json.load(f)
     headers["Authorization"] = config.get("Authorization", "")
     headers["x-contract-id"] = config.get("x-contract-id", "")
