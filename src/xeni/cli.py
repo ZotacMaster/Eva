@@ -12,8 +12,8 @@ import click
 import importlib
 import os
 
-from eva.utils.config import ADAPTER_MAP,EIZEN_URL, ConfigManager, AgentManager
-from eva.http_proxy import server 
+from xeni.utils.config import ADAPTER_MAP,EIZEN_URL, ConfigManager, AgentManager
+from xeni.http_proxy import server 
 
 MCP_SERVER_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "mcp_proxy"))
 
@@ -65,7 +65,7 @@ def connect_agent(agent_name: str):
             return
             
         # Import the adapter module dynamically
-        module = importlib.import_module(f"eva.mcp_proxy.adapters.{agent_name.lower()}")
+        module = importlib.import_module(f"xeni.mcp_proxy.adapters.{agent_name.lower()}")
         adapter_class = getattr(module, adapter_info)
         
         # Create adapter instance and connect
@@ -114,8 +114,8 @@ def list_agents(all: bool, status: str):
     else:
         click.echo("No specific option provided. Use --all or --status <agent_name>.")
         click.echo("Examples:")
-        click.echo("  eva list --all")
-        click.echo("  eva list --status claude")
+        click.echo("  xeni list --all")
+        click.echo("  xeni list --status claude")
 
 @main.command("start")
 @click.option("--port", default=8000, help="Port to run the server on (default: 8000)")

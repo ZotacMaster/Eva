@@ -1,6 +1,6 @@
-# Eva 🧠
+# Xeni 🧠
 
-Eva is a modular Python framework designed for building intelligent agents and automation pipelines. It emphasizes extensibility, configuration-driven workflows, and ease of integration with various models or tools.
+Xeni is a modular Python framework designed for building intelligent agents and automation pipelines. It emphasizes extensibility, configuration-driven workflows, and ease of integration with various models or tools.
 
 ---
 
@@ -16,21 +16,21 @@ Eva is a modular Python framework designed for building intelligent agents and a
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/ZotacMaster/Eva.git
-cd Eva
+git clone https://github.com/ZotacMaster/Xeni.git
+cd Xeni
 pip install .
 ```
 Or, install via pipx or pip
 ```bash
-pipx install eva
-pip install eva
+pipx install xeni
+pip install xeni
 ```
 
 ## 📂 Project Structure
 ```bash 
-Eva
+Xeni
 └── src
-    └── eva
+    └── xeni
         ├── http_proxy
         │   ├── endpoints
         │   │   ├── __init__.py
@@ -61,13 +61,13 @@ uv.lock
 ```
 
 ## 🧑‍💻 Usage
-Commands avialable to eva:
+Commands avialable to xeni:
 ```bash
-eva start #starts the FastAPI server
+xeni start #starts the FastAPI server
 
-eva connect ${agent_name} #Connect to supported agents
+xeni connect ${agent_name} #Connect to supported agents
 
-eva key ${API_key} --token ${Bearer token} #Sets the user credentials
+xeni key ${API_key} --token ${Bearer token} #Sets the user credentials
 
-eva set-url ${url}
+xeni set-url ${url}
 ```

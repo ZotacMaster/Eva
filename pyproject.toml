@@ -1,8 +1,8 @@
 [project]
-name = "Eva"
+name = "xeni"
 version = "0.1.0"
 license = "MIT"
-description = "Eva - A CLI program to manage all your MCPs"
+description = "xeni - A CLI program to manage all your MCPs"
 readme = "README.md"
 authors = [
     { name = "Suchetan Chakraborty", email = "suchetan005@gmail.com" }
@@ -16,7 +16,7 @@ dependencies = [
     "pydantic>=2.11.7",
     "uvicorn>=0.34.3",
 ]
-keywords = ["eva", "cli-mcp-manager", "mcp", "AI", "fastapi"]
+keywords = ["xeni", "cli-mcp-manager", "mcp", "AI", "fastapi"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Environment :: Console",
@@ -31,7 +31,7 @@ classifiers = [
 ]
 
 [project.scripts]
-eva = "eva.cli:main"
+xeni = "xeni.cli:main"
 
 [build-system]
 requires = ["hatchling"]

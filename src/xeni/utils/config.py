@@ -16,8 +16,8 @@ ADAPTER_MAP = {
     "vscode": "VSCodeAdapter",
 }
 
-CONFIG_DIR = Path.home() / ".eva"
-CONFIG_FILE = CONFIG_DIR / "evasrc"
+CONFIG_DIR = Path.home() / ".xeni"
+CONFIG_FILE = CONFIG_DIR / "xenisrc"
 EIZEN_URL = CONFIG_DIR / "eizen_url.text"
 
 
